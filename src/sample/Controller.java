@@ -23,13 +23,11 @@ public class Controller {
             //
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
         return root;
     }
 
-    public void createField(GridPane pane) throws InterruptedException {
+    public void createField(GridPane pane) {
 
         int length = 10;
         for (int i = 0; i < length; i++) { // row
@@ -42,18 +40,18 @@ public class Controller {
                 pane.getChildren().add(rectangles[i][j]);
             }
         }
-        rectangles[0][0].setFill(Color.RED);
+      /*  rectangles[0][0].setFill(Color.RED);
         for (int j = 0; j < length-1; j++) {
             if (rectangles[0][j + 1].getFill() == Color.WHITE  ) {
                 addCell(0, j+1);
                 removeCell(0, j);
             }
         }
+        */
     }
 
-    public void removeCell(int row, int column) throws InterruptedException {
+    public void removeCell(int row, int column) {
         rectangles[row][column].setFill(Color.WHITE);
-        Thread.sleep(2000);
     }
 
     public void addCell(int row, int column) {
