@@ -1,81 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-
-<GridPane fx:id="grid" alignment="center" gridLinesVisible="true" hgap="1.0" prefHeight="1000.0" prefWidth="1000.0" vgap="1.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="10.0" />
+<?import javafx.scene.layout.GridPane?>
 
 
+<GridPane fx:id="grid" alignment="center" gridLinesVisible="true" hgap="1.0" prefHeight="1000.0" prefWidth="1000.0" vgap="1.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
 
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-    </rowConstraints>
 </GridPane>
