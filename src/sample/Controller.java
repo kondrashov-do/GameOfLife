@@ -2,18 +2,16 @@ package sample;
 
 
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import org.w3c.dom.css.Rect;
+import sun.text.resources.cldr.ia.FormatData_ia;
 
 import java.io.IOException;
-import java.util.Random;
 
 public class Controller {
+
+    Rectangle[][] rectangles = new Rectangle[10][10];
 
     public GridPane createGrid() {
         GridPane root = null;
@@ -21,7 +19,7 @@ public class Controller {
             root = FXMLLoader.load(getClass().getResource("sample.fxml"));
             //init alive cells
 
-            createKillCell(root);
+            createField(root);
 
             //
         } catch (IOException e) {
@@ -30,34 +28,39 @@ public class Controller {
         return root;
     }
 
-    public void createKillCell(GridPane pane) {
+    public void createField(GridPane pane) {
 
         int length = 10;
-        for (int y = 0; y < length; y++) {
-            for (int x = 0; x < 10; x++) {
-
-
-                // Create a new TextField in each Iteration
-                Rectangle tf = new Rectangle(99,99,Color.WHITE);
-
-                // Iterate the Index using the loops
-                pane.setRowIndex(tf, y);
-                pane.setColumnIndex(tf, x);
-                pane.getChildren().add(tf);
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
+                // Create a new rectangle in each Iteration
+                rectangles[i][j] = new Rectangle(99,99,Color.WHITE);
+                pane.setColumnIndex(rectangles[i][j], i);
+                pane.setRowIndex(rectangles[i][j], j);
+                pane.getChildren().add(rectangles[i][j]);
             }
         }
+        addCell(pane, 0,0);
+        //for (int j = 0; j < length; j++) {
+        //    if (pane.getChildren().) {
 
-        Rectangle tf = new Rectangle(99,99,Color.BLACK);
-        pane.setRowIndex(tf, 1);
-        pane.setColumnIndex(tf, 1);
-        pane.getChildren().add(tf);
-
-        tf = new Rectangle(99,99,Color.WHITE);
-        pane.setRowIndex(tf, 1);
-        pane.setColumnIndex(tf, 1);
-        pane.getChildren().add(tf);
+        //    }
+        //}
 
 
     }
 
+    public void removeCell(GridPane pane, int column, int row) {
+        Rectangle rectangle = new Rectangle(99,99,Color.WHITE);
+        pane.setColumnIndex(rectangle, column);
+        pane.setRowIndex(rectangle, row);
+        pane.getChildren().add(rectangle);
+    }
+
+    public void addCell(GridPane pane, int column, int row) {
+        Rectangle rectangle = new Rectangle(99,99,Color.BLACK);
+        pane.setColumnIndex(rectangle, column);
+        pane.setRowIndex(rectangle, row);
+        pane.getChildren().add(rectangle);
+    }
 }
