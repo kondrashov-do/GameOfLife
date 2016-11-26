@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import sun.text.resources.cldr.ia.FormatData_ia;
 
 import java.io.IOException;
 
@@ -46,27 +45,18 @@ public class Controller {
         rectangles[0][0].setFill(Color.RED);
         for (int j = 0; j < length-1; j++) {
             if (rectangles[0][j + 1].getFill() == Color.WHITE  ) {
-                rectangles[0][j + 1].setFill(Color.RED);
-                rectangles[0][j].setFill(Color.WHITE);
+                addCell(0, j+1);
+                removeCell(0, j);
             }
-
         }
-
-
     }
 
-    public void removeCell(GridPane pane, int column, int row) {
-        Rectangle rectangle = new Rectangle(99,99,Color.WHITE);
-
-        pane.setColumnIndex(rectangle, column);
-        pane.setRowIndex(rectangle, row);
-        pane.getChildren().add(rectangle);
+    public void removeCell(int row, int column) throws InterruptedException {
+        rectangles[row][column].setFill(Color.WHITE);
+        Thread.sleep(2000);
     }
 
-    public void addCell(GridPane pane, int column, int row) {
-        Rectangle rectangle = new Rectangle(99,99,Color.BLACK);
-        pane.setColumnIndex(rectangle, column);
-        pane.setRowIndex(rectangle, row);
-        pane.getChildren().add(rectangle);
+    public void addCell(int row, int column) {
+        rectangles[row][column].setFill(Color.RED);
     }
 }
