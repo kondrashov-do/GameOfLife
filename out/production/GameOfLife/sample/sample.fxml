@@ -77,10 +77,5 @@
         <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
         <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
         <RowConstraints minHeight="1.0" prefHeight="3.0" vgrow="SOMETIMES" />
-
-
     </rowConstraints>
-   <children>
-      <Button mnemonicParsing="false" onAction="#Rm" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-   </children>
 </GridPane>
