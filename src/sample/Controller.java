@@ -30,13 +30,13 @@ public class Controller {
     public void createField(GridPane pane) {
 
         int length = 10;
-        for (int i = 0; i < length; i++) { // row
-            for (int j = 0; j < length; j++) { // column
+        for (int i = 0; i < length; i++) { // column
+            for (int j = 0; j < length; j++) { // row
                 // Create a new rectangle in each Iteration
                 rectangles[i][j] = new Rectangle(99,99,Color.WHITE);
                 rectangles[i][j].setFill(Color.WHITE);
-                pane.setRowIndex(rectangles[i][j], i);
-                pane.setColumnIndex(rectangles[i][j], j);
+                pane.setRowIndex(rectangles[i][j], j);
+                pane.setColumnIndex(rectangles[i][j], length-1-i);
                 pane.getChildren().add(rectangles[i][j]);
             }
         }
@@ -51,10 +51,10 @@ public class Controller {
     }
 
     public void removeCell(int row, int column) {
-        rectangles[row][column].setFill(Color.WHITE);
+        rectangles[column][row].setFill(Color.WHITE);
     }
 
     public void addCell(int row, int column) {
-        rectangles[row][column].setFill(Color.RED);
+        rectangles[column][row].setFill(Color.RED);
     }
 }
