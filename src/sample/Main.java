@@ -15,9 +15,9 @@ public class Main extends Application {
        // root.getChildren().remove(cellName);
 
         primaryStage.setTitle("Hello Game Of Life");
-        Controller myController = new Controller();
-        primaryStage.setScene(new Scene(myController.createGrid(), 1000, 1000));
-        myController.rectangles[0][0].setFill(Color.BLUE);//[column] [row]
+        Grid myGrid = new Grid();
+        primaryStage.setScene(new Scene(myGrid.createGrid(), 1000, 1000));
+        myGrid.cells[0][0].setFill(Color.BLUE);//[column] [row]
         primaryStage.show();
         //implimentaion of the rule
 
@@ -30,9 +30,9 @@ public class Main extends Application {
                     //updateMessage(sdf.format(new Date()));
 
                     for (int j = 0; j < 10 - 1; j++) {
-                        if (myController.rectangles[j+1][0].getFill() == Color.WHITE  ) {
-                            myController.removeCell(j, 0);
-                            myController.addCell(j+1,0);
+                        if (myGrid.cells[j+1][0].getFill() == Color.WHITE) {
+                            myGrid.removeCell(j, 0);
+                            myGrid.addCell(j+1,0);
                         }
                     try {
                         Thread.sleep(1000);
