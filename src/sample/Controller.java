@@ -34,9 +34,10 @@ public class Controller {
             for (int j = 0; j < length; j++) { // row
                 // Create a new rectangle in each Iteration
                 rectangles[i][j] = new Rectangle(99,99,Color.WHITE);
+
                 rectangles[i][j].setFill(Color.WHITE);
                 pane.setRowIndex(rectangles[i][j], j);
-                pane.setColumnIndex(rectangles[i][j], length-1-i);
+                pane.setColumnIndex(rectangles[i][j], i);//length-1-i);
                 pane.getChildren().add(rectangles[i][j]);
             }
         }
@@ -50,11 +51,11 @@ public class Controller {
         */
     }
 
-    public void removeCell(int row, int column) {
-        rectangles[column][row].setFill(Color.WHITE);
+    public void removeCell(int column,int row) {
+        this.rectangles[column][row].setFill(Color.WHITE);
     }
 
-    public void addCell(int row, int column) {
-        rectangles[column][row].setFill(Color.RED);
+    public void addCell( int column, int row) {
+        this.rectangles[column][row].setFill(Color.RED);
     }
 }

@@ -17,6 +17,7 @@ public class Main extends Application {
         primaryStage.setTitle("Hello Game Of Life");
         Controller myController = new Controller();
         primaryStage.setScene(new Scene(myController.createGrid(), 1000, 1000));
+        myController.rectangles[0][0].setFill(Color.BLUE);//[column] [row]
         primaryStage.show();
         //implimentaion of the rule
 
@@ -27,21 +28,20 @@ public class Main extends Application {
                 //SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
                 while (true) {
                     //updateMessage(sdf.format(new Date()));
-                    myController.rectangles[0][0].setFill(Color.RED);
-                    for (int j = 0; j < 10-1; j++) {
+
+                    for (int j = 0; j < 10 - 1; j++) {
                         if (myController.rectangles[j+1][0].getFill() == Color.WHITE  ) {
-                            myController.addCell(0, j+1);
-                            myController.removeCell(0, j);
+                            myController.removeCell(j, 0);
+                            myController.addCell(j+1,0);
                         }
-                        // Thread.sleep(1500);
-                    }
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException ex) {
                         break;
                     }
                 }
-                return null;
+                    return null;
+                }
             }
         };
         //dynamicTimeDisplayLabel2.textProperty().bind(updateFieldTask.messageProperty());
