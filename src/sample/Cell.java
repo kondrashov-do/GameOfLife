@@ -4,12 +4,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Cell  extends Rectangle {
+    public static final int AMOUNT_OF_NEIGHBOURS = 8;
+    Cell[] neighbours = new Cell[AMOUNT_OF_NEIGHBOURS];
 
-    Cell[] neighbours = new Cell[8];
     boolean alive = false;
     boolean aliveInNextGeneration = false;
-    int positionX = 0;
-    int positionY = 0;
+/*    int positionX = 0;
+    int positionY = 0;*/
 
     public Cell(int i, int j, Color c) {
         super(i, j, c);
@@ -39,7 +40,7 @@ public class Cell  extends Rectangle {
         int amountOfAliveNeighbours = 0;
         for (int i = 0; i < neighbours.length; i++) {
             if (neighbours[i].isAlive()) {
-                amountOfAliveNeighbours = amountOfAliveNeighbours + 1;
+                amountOfAliveNeighbours += 1;
             }
         }
         if (this.isAlive() && amountOfAliveNeighbours < 2) {
