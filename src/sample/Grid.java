@@ -40,7 +40,7 @@ public class Grid {
         assignNeighbours();
     }
 
-    public void initialize() {
+    public void init() {
         //initial state of the field
         cells[2][1].makeAlive();//[column] [row]
         cells[2][2].makeAlive();//[column] [row]
