@@ -12,7 +12,7 @@ public class GameOfLife extends Application {
         Grid myGrid = new Grid();
         primaryStage.setScene(new Scene(myGrid.createField(), 1000, 1000));
         //assign neighbours
-        myGrid.init();
+        myGrid.initialize();
         primaryStage.show();
 
         Task updateFieldTask = new Task<Void>() {
